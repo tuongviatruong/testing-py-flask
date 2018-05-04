@@ -12,7 +12,7 @@ class Game(db.Model):
     description = db.Column(db.String(100))
 
 
-def connect_to_db(app, db_uri="postgresql:///testdb"):
+def connect_to_db(app, db_uri="postgresql:///games"):
     app.config['SQLALCHEMY_DATABASE_URI'] = db_uri
     db.app = app
     db.init_app(app)
